@@ -1,20 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
+import OuterClick from "./OuterClick";
+import { withPageConfig } from "./layout";
+import { SidebarContent } from "./SidebarContent";
 
-const Sidebar =(props) => {
-    <React.Fragment>
-        <Outerclick active ={!props.pageConfig.sidebarCollapsed && (
-            props.pageConfig.screenSize === "xs" || 
-            props.pageConfig.screenSize === "sm" ||
-            props.pageConfig.screenSize === "md" ||
-        )
-    } 
-    onClickOutside={()=> props.pageConfig.toggleSidebar()}
+const Sidebar = (props) => (
+  <React.Fragment>
+    {}
+    <OuterClick
+      active={
+        !props.pageConfig.sidebarCollapsed &&
+        (props.pageConfig.screenSize === "xs" ||
+          props.pageConfig.screenSize === "sm" ||
+          props.pageConfig.screenSize === "md")
+      }
+      onClickOutside={() => props.pageConfig.toggleSidebar()}
     >
-        <SidebarContent { ...props} />
-    </Outerclick>
-    </React.Fragment>
-  return
-}
+      <SidebarContent {...props} />
+    </OuterClick>
+  </React.Fragment>
+);
 
-export default Sidebar;
+Sidebar.proTypes = {
+  collapsed: PropTypes.bool,
+  pageConfig: PropTypes.object,
+};
+
+const cfgSidebar = withPageConfig(Sidebar);
+
+export { cfgSidebar as Sidebar };
