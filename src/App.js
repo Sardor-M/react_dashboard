@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { hot } from "react-hot-loader";
+import { BrowseRouter as Router } from "react-router-dom";
+import { RoutedContent } from "./routes";
+import AppLayout from "./layout/default";
 
-function App() {
+const basePath = process.env.BASE_PATH || "/";
+const Appclient = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename={basePath}>
+      <Applayout>
+        <RoutedContent />
+      </Applayout>
+    </Router>
   );
-}
+};
 
-export default App;
+export default hot(module)(AppClient);
