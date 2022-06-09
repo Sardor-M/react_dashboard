@@ -18,6 +18,15 @@ export class SidebarContent extends React.Component {
       entryAnimationFinished: false,
     };
   }
+  componentDidMounting() {
+    this.sidebarEntryAnimate = new Common.SidebarEntryAnimate();
+    this.slimSidebarAnimate = new Common.SlimSidebarAnimate();
+    this.slimMenuAnimate = new Common.SlimMenuAnimate();
+
+    this.sidebarEntryAnimate.executeAnimation().then(() => {
+      this.setState({ entryAnimationFinished: true });
+    });
+  }
 }
 
 export default SidebarContent;
