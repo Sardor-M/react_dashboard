@@ -29,21 +29,19 @@ export class SidebarContent extends React.Component {
     });
   }
 
+  render() {
+    const { pageConfig, collapsed, slim, children } = this.props;
 
-render () {
-    const {
-        animationDisabled,
-        children 
-    } =this.props;
-
-    const sidebarClass = classNames ("sidebar" {
-
-    }) ;
+    const sidebarClass = classNames("sidebar", {
+      "sidebar--slim": slim || pageConfig.sidebarSlim,
+      "sidebar--collapsed": collapsed || pageConfig.sidebarCollapsed,
+      "sidebar--animate-entry-complete": this.state.entryAnimationFinished,
+    });
 
     return (
-        <div className={sidebarClass} ref = {this.sidebarRef}>
-            {children}
-        </div>
+      <div className={sidebarClass} ref={this.sidebarRef}>
+        {children}
+      </div>
     );
   }
 }
