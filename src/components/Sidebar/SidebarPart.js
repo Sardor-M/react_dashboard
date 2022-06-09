@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import className from "classnames";
+import classNames from "classnames";
 
 const SidebarPart = (props) => {
   const sectionClass = classNames(
@@ -13,3 +13,10 @@ const SidebarPart = (props) => {
   );
   return <div className={sectionClass}>{props.children}</div>;
 };
+
+SidebarPart.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
+
+export { SidebarPart };
