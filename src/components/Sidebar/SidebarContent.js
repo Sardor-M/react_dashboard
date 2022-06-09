@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import Common from "./common";
 
 export class SidebarContent extends React.Component {
   static propTypes = {
@@ -27,6 +28,22 @@ export class SidebarContent extends React.Component {
       this.setState({ entryAnimationFinished: true });
     });
   }
-}
 
-export default SidebarContent;
+
+render () {
+    const {
+        animationDisabled,
+        children 
+    } =this.props;
+
+    const sidebarClass = classNames ("sidebar" {
+
+    }) ;
+
+    return (
+        <div className={sidebarClass} ref = {this.sidebarRef}>
+            {children}
+        </div>
+    );
+  }
+}
