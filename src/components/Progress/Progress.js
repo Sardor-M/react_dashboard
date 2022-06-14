@@ -5,19 +5,20 @@ import classes from "Progress.scss";
 import { Progress as BsProgress } from "reactstrap";
 
 const Progress = (props) => {
-  const { children, className, ...otherProps } = props;
-  const progressClass = classNames(className);
+  const { children, slim, className, ...otherProps } = props;
+  const progressClass = classNames(className, { [classes["slim"]]: slim });
 
   return (
     <BsProgress className={progressClass} {...otherProps}>
-      {children}
+      {!slim && children}
     </BsProgress>
   );
 };
 
 Progress.propTypes = {
+  slim: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
 };
 
-export default Progress;
+export { Progress };

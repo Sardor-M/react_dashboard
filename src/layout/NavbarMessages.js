@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "pprop-types";
 import _ from "lodash";
-import { Avatar } from "@material-ui/core";
 import {
   Avatar,
   UncontrolledDropdown,
