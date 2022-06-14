@@ -17,4 +17,15 @@
             }
         }
     }
+
+    &--background {
+        color: map-get($dashboard-colors, "white");
+
+        @each $name, $color in $dashboard-colors {
+           &.custom-card--color-#{$name}  {
+            background-color: $color
+           }
+        }
+       
+    }
 }
