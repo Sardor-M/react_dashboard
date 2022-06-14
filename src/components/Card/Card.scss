@@ -1,0 +1,20 @@
+.custom-card {
+    &--border-dash,
+    &--vorder-dot,
+    &--dorder {
+        @each $name, $color in $dashboard-colors {
+            &.custom-card--color-#{$name} {
+                border-color:$color
+            }
+        }
+    }
+    &--ride-border {
+        border-left-width: 2px;
+
+        @each $name, $color in $dashboard-colors {
+            &.custom-border--color-#{$name} {
+                border-left-color:$color
+            }
+        }
+    }
+}

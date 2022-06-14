@@ -30,4 +30,4 @@ Card.defaultProps = {
   type: null,
   color: null,
 };
-export default Card;
+export { Card };
