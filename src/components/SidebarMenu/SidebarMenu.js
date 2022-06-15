@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withRouter } from "react-router-dom";
 import { MenuContext } from "./MenuContext";
 
 class SidebarMenu extends React.Conponent {
