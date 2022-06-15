@@ -64,4 +64,49 @@ export class SidebarMenuItem extends React.Component {
     super(props);
     this.id = uuid();
   }
+
+  componentDidMount() {
+    const entry = {
+      id: this.id,
+      parentId: this.props.parentId,
+    };
+    if (this.props.to) {
+      entry.url = this.props.to;
+    }
+    this.props.addEntry(entry);
+  }
+  componentWillMount() {
+    this.props.removeEntry(this.id);
+  }
+  getEntry() {
+    return this.props.entries[this.id];
+  }
+
+  toggleNode() {
+    const entry = this.getEntry();
+    this.props.updateEntry(this.id, { open: !entry.open });
+  }
+
+  render() {
+    const entry = this.getEntry();
+    const classBase = this.props.isSubNode ? "sidebar-submenu" : "sidebar-menu";
+    const itemClass = classNames(`${classBase}__entry`, {
+      // function will go here
+    });
+
+    return (
+      <li
+        className={classNames(itemClass, {
+          "sidebar-menu__entry -- no caret": this.props.noCaret,
+        })}
+      >
+        <SidebarMenuItemLink
+          to={this.props.to || null}
+          href={this.props.href || null}
+          onToggle={this.toggleNode.bind(this)}
+          classBase={classBase}
+        ></SidebarMenuItemLink>
+      </li>
+    );
+  }
 }
