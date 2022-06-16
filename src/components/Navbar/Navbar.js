@@ -1,6 +1,6 @@
 import React from "react";
 import className from "classnames";
-import ProTypes from "pro-types";
+import PropTypes from "pro-types";
 import { Navbar as NavbarBs, Container } from "reactstrap";
 import { color } from "@material-ui/core";
 import shadow from "@material-ui/core/styles/shadows";
@@ -15,11 +15,11 @@ const Navbar = ({ themed, fluid, className, color, ...otherProps }) => {
   <Container className="navbar_wrap"></Container>
 </NavbarBs>;
 
-Navbar.proTypes = {
-  themed: ProTypes.bool,
-  fluid: ProTypes.bool,
-  className: ProTypes.string,
-  color: ProTypes.string,
+Navbar.propTypes = {
+  themed: PropTypes.bool,
+  fluid: PropTypes.bool,
+  className: PropTypes.string,
+  color: PropTypes.string,
 };
 
 Navbar.defaultProps = {
