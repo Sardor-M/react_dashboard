@@ -25,4 +25,9 @@ SidebarTrigger.propTypes = {
   pageConfig: PropTypes.object,
 };
 
-export default SidebarTirgger;
+SidebarTrigger.defaultProps = {
+  tag: NavLink,
+  children: <i className="fa fa-bars fa-fw"></i>,
+};
+
+export { SidebarTrigger };
