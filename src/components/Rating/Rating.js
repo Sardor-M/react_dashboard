@@ -34,10 +34,31 @@ export const Rating = (props) => {
           if (isInteractive) {
             starProps["href"] = "javascript";
           }
+
+          starColor.push(
+            <StartElement {...starProps} key={i}>
+              {" "}
+            </StartElement>
+          );
         }
+        return stars;
       }}
     </div>
   );
+};
+
+Rating.propTypes = {
+  className: PropTypes.string,
+  max: PropTypes.number,
+  at: PropTypes.number,
+  starColor: PropTypes.string,
+  onSelect: PropTypes.func,
+};
+
+Rating.defaultProps = {
+  max: 5,
+  at: 0,
+  starColor: "warning",
 };
 
 export default Rating;
