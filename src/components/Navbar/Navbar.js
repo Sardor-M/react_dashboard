@@ -2,8 +2,6 @@ import React from "react";
 import className from "classnames";
 import PropTypes from "pro-types";
 import { Navbar as NavbarBs, Container } from "reactstrap";
-import { color } from "@material-ui/core";
-import shadow from "@material-ui/core/styles/shadows";
 
 const Navbar = ({ themed, fluid, className, color, ...otherProps }) => {
   let navbarClass = className({
