@@ -22,4 +22,4 @@ IconBadge.propTypes = {
   className: PropTypes.string,
 };
 
-export default IconBadge;
+export { IconBadge};
