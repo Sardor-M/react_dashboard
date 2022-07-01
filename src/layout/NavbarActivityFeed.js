@@ -43,4 +43,4 @@ NavbarActivityFeed.propTypes = {
   style: PropTypes.object,
 };
 
-export default NavbarActivityFeed;
+export { NavbarActivityFeed };
