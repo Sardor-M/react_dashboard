@@ -33,6 +33,22 @@ const ProfileFont = (props)=> {
             </div>
         </Profile>
     )
+};
+ProfileFont.propTypes = {
+    children: PropTypes.node,
+    bcgrdColor: PropTypes.string,
+    fgColor:PropTypes.string,
+    bcgrdColorCustom:PropTypes.string,
+    fgColorCustom:PropTypes.string,
+    ...Profile.propTypes
+
 }
 
-export default ProfileFont;
+ProfileFont.defaultProps ={
+    bcgrdColor:"300",
+    fgColor:"white",
+    size:"md",
+}
+
+export {ProfileFont};
+
