@@ -23,6 +23,20 @@ const ProfileFont = (props)=> {
     const childClass = classNames("profile-font__text",
     fgColor && profileColors [`fg-color--${fgColor}`]);
 
+    const parentCustomStyle = bcgrdColorCustom ? {
+        backgroundColor: bcgrdColorCustom
+    } : {};
+
+    const childCustomStyle = fgColorCustom ? {
+        color: fgColorCustom
+    } : {};
+
+    const child = (
+        <span>
+            {children}
+        </span>
+    )
+
     return (
         <Profile {...profileProps}>
             <div className={parentClass} style ={parentCustomStyle}>
