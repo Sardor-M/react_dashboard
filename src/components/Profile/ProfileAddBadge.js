@@ -16,4 +16,4 @@ ProfileAddBadge.propTypes = {
 
 ProfileAddBadge.addOnId = "profile--badge";
 
-export default ProfileAddBadge;
+export { ProfileAddBadge };
