@@ -35,7 +35,26 @@ class ProfileFont extends React.PureComponent {
       },
       className
     );
+    return (
+      <div className={parentClass}>
+        <Profile className="profile-image" {...profileProps}>
+          <img
+            src={src}
+            alt={alt}
+            onLoad={() => {
+              this.setState({ imgLoaded: true });
+            }}
+          />
+        </Profile>
+        {!this.state.imgLoaded && (
+          <ProfileFont
+            className="profile-image__placeholder"
+            {...profileProps}
+          ></ProfileFont>
+        )}
+      </div>
+    );
   }
 }
 
-export default ProfileImage;
+export { ProfileImage };
