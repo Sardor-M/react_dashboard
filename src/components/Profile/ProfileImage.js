@@ -6,13 +6,13 @@ import _ from "lodash";
 import { Profile } from "./Profile";
 import { ProfileFont } from "./ProfileFont";
 
-class ProfileFont extends React.PureComponent {
+class ProfileImage extends React.PureComponent {
   static propTypes = {
     src: PropTypes.string.isRequired,
     placeholder: PropTypes.node,
     alt: PropTypes.string,
     className: PropTypes.string,
-    ..._.omit(Avatar.propTypes, [`children`]),
+    ..._.omit(Profile.propTypes, [`children`]),
   };
 
   static defaultProps = {
