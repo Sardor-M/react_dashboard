@@ -27,4 +27,4 @@ class SidebarMenu extends React.Conponent {
   }
 }
 
-export default SidebarMenu;
+export { SidebarMenu };

@@ -8,4 +8,4 @@ const SidebarClose = (props) => {
     children: PropTypes.node,
   };
 };
-export default SidebarClose;
+export { SidebarClose };

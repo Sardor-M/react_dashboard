@@ -59,5 +59,3 @@ RatingStar.defualtProps = {
   at: 0,
   starColor: "warning",
 };
-
-export default RatingStar;

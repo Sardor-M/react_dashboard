@@ -20,5 +20,3 @@ Seperator.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
 };
-
-export default Seperator;

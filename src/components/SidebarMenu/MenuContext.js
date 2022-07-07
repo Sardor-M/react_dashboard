@@ -10,4 +10,4 @@ const MenuContext = React.createContext({
 //   return <div>MenuContext</div>;
 // }
 
-export default MenuContext;
+export { MenuContext };
