@@ -30,4 +30,6 @@ SidebarTrigger.defaultProps = {
   children: <i className="fa fa-bars fa-fw"></i>,
 };
 
-export { SidebarTrigger };
+const cfgSidebarTrigger = withPageConfig(SidebarTrigger);
+
+export { cfgSidebarTrigger as SidebarTrigger };
