@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
+
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
@@ -16,7 +16,7 @@ export const Divider = ({ position, children, className }) => {
   return <div className={divideClass}>{children}Divider</div>;
 };
 
-Divide.propTypes = {
+Divider.propTypes = {
   position: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node,

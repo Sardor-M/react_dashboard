@@ -15,7 +15,7 @@ export const Rating = (props) => {
 
   const ratingClass = classNames(classes.Rating, className);
   const isInteractive = !!onSelect;
-  const StarElement = isInteractive ? "a" : "i";
+  const StartElement = isInteractive ? "a" : "i";
 
   return (
     <div className={ratingClass} {...otherProps}>
@@ -60,5 +60,3 @@ Rating.defaultProps = {
   at: 0,
   starColor: "warning",
 };
-
-export default Rating;
