@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-export const Divide = ({ position, children, className }) => {
+export const Divider = ({ position, children, className }) => {
   const divideClass = classNames(
     {
       "hr-text-center": position === "center",
+      "hr-text-right": position === "right",
     },
     "hr-text",
     className
