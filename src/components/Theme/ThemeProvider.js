@@ -41,4 +41,5 @@ export class ThemeProvider extends React.Component {
                 {children}
             </Provider>
         );
-  
+    }
+}
