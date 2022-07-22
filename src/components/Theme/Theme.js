@@ -18,4 +18,4 @@ const ContextTheme = (otherProps) => (
   </Customer>
 );
 
-export default Theme;
+export {ContextTheme as Theme };
